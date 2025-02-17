@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './components/Header';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className='app'>
+      <Header handleClick={handleClick} />
+      <h1>INSERT COMPS NAME</h1>
+      <div className="container">
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          In the theory of computational complexity, the travelling salesman problem (TSP) asks the following question:
+          "Given a list of cities and the distances between each pair of cities, what is the shortest possible route that 
+          visits each city exactly once and returns to the origin city?" It is an NP-hard problem in combinatorial optimization, 
+          important in theoretical computer science and operations research.
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <div className="container">
+        <p>
+          
+        </p>
+      </div>
+    </div>
   )
 }
 
